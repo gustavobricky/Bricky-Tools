@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bricky Tools</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #22c55e;
+        }
+
+        input {
+            padding: 10px;
+            width: 220px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            background: #22c55e;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .box {
+            margin-top: 20px;
+        }
+
+        #output, #bioOutput {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #38bdf8;
+        }
+
+        a button {
+            background: #38bdf8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔥 Bricky Tools</h1>
+    <p>🚀 Free tools for online hustlers</p>
+
+    <!-- USERNAME GENERATOR -->
+    <div class="box">
+        <h2>😎 Username Generator</h2>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <br>
+        <button onclick="generateUsername()">Generate Username</button>
+        <div id="output"></div>
+    </div>
+
+    <hr>
+
+    <!-- BIO GENERATOR -->
+    <div class="box">
+        <h2>📝 Bio Generator</h2>
+        <input type="text" id="bioName" placeholder="Enter your name">
+        <br>
+        <button onclick="generateBio()">Generate Bio</button>
+        <div id="bioOutput"></div>
+    </div>
+
+    <hr>
+
+    <!-- CONTACT BUTTON -->
+    <h3>📲 Contact Me</h3>
+    <a href="https://wa.me/2547XXXXXXXX" target="_blank">
+        <button>Chat on WhatsApp 💬</button>
+    </a>
+
+    <script>
+        function generateUsername() {
+            let name = document.getElementById("nameInput").value;
+
+            if(name === "") {
+                document.getElementById("output").innerText = "⚠️ Enter your name!";
+            } else {
+                let randomNum = Math.floor(Math.random() * 1000);
+                document.getElementById("output").innerText =
+                "🔥 Your username: " + name + randomNum;
+            }
+        }
+
+        function generateBio() {
+            let name = document.getElementById("bioName").value;
+
+            if(name === "") {
+                document.getElementById("bioOutput").innerText = "⚠️ Enter your name!";
+            } else {
+                document.getElementById("bioOutput").innerText =
+                "🔥 " + name + " | Digital Hustler 💻 | Making money online 💰 | Stay grinding 🚀";
+            }
+        }
+    </script>
+
+</body>
+</html>
